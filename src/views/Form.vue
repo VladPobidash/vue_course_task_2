@@ -21,7 +21,16 @@
 
 <script>
 export default {
-  emits: ['addBlock'],
+  emits: {
+    addBlock: newBlock => {
+      if (newBlock.type && newBlock.value) {
+        return true
+      } else {
+        console.warn('Для добавления нового блока передайте корректные данные.')
+        return false
+      }
+    }
+  },
   data() {
     return {
       blockType: 'title',

@@ -13,7 +13,6 @@ import Comments from "./views/Comments"
 import axios from "axios"
 
 export default {
-  name: 'app',
   data() {
     return {
       blocks: []
